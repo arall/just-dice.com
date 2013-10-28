@@ -161,7 +161,7 @@ function create_ui() {
 
   var $row2 = $('<div class="row"/>');
   var $label2 = $('<p class="llabel">Steps</p>');
-  $steps = $('<input id="steps" value="6"/>');
+  $steps = $('<input id="steps" value="10"/>');
   $steps.keyup(function() {set_run();});
   $row2.append($label2);
   $row2.append($steps);

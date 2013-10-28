@@ -32,7 +32,8 @@ function martingale()
     {
       current_steps = 1;
       $("#pct_bet").val(start_bet);
-      running = false;
+      //running = false;
+      $("#a_hi").trigger('click');
     }
 
     else if ($.isNumeric($multiplier.val()) && 
@@ -151,7 +152,7 @@ function create_ui() {
 
   var $row1 = $('<div class="row"/>');
   var $label1 = $('<p class="llabel">Multiplier</p>');
-  $multiplier = $('<input id="multiplier" />');
+  $multiplier = $('<input id="multiplier" value="2"/>');
   $multiplier.keyup(function() {set_run();});
   var $x = $('<p class="rlabel">x</p>');
   $row1.append($label1);
@@ -160,7 +161,7 @@ function create_ui() {
 
   var $row2 = $('<div class="row"/>');
   var $label2 = $('<p class="llabel">Steps</p>');
-  $steps = $('<input id="steps"/>');
+  $steps = $('<input id="steps" value="6"/>');
   $steps.keyup(function() {set_run();});
   $row2.append($label2);
   $row2.append($steps);
